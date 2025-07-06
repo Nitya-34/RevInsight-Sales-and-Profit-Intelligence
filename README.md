@@ -22,19 +22,21 @@ This project performs a detailed **sales and purchase analysis** for vendors usi
 
 ## 🧱 Project Structure
 
-
+```bash
 Vendor-Sales-Analysis/
 │
-├── data/                         # Raw CSV files (Sales, Purchases, etc.)
-├── logs/                         # Log files for data pipeline steps
+├── data/                         # Folder to store raw CSV files (purchases, sales, etc.)
+├── logs/                         # Auto-generated logs for ingestion and summary steps
 │
-├── ingestion\_db.py              # Script to ingest CSVs into SQLite
-├── sales\_summary.py             # SQL + Python script to generate clean summary
-├── EDA for sales analysis.ipynb # Exploratory Data Analysis using pandas/plots
-├── SQL for sales analysis.ipynb # SQL queries and testing on inventory.db
+├── ingestion_db.py              # Script to ingest CSV files into SQLite DB
+├── sales_summary.py             # Script to compute vendor KPIs and generate final_table
 ├── inventory.db                 # SQLite database (auto-generated)
-├── PowerBI Dashboard.pbix       # Power BI file (based on final\_table)
-└── README.md                    # You're here!
+│
+├── EDA for sales analysis.ipynb # Jupyter notebook for exploratory data analysis
+├── SQL for sales analysis.ipynb # Notebook with SQL queries for sales insights
+├── Vendor Sales Project Dashboard.pbix  # Power BI dashboard built from final_table
+└── README.md                    # Project documentation
+````
 
 ---
 
