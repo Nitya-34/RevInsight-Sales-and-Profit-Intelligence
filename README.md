@@ -1,11 +1,16 @@
 
-# 📊 Vendor Sales Analysis
+#  Vendor Sales Analysis
 
-This project performs a detailed **sales and purchase analysis** for vendors using Python, SQL, SQLite, and Power BI. It covers end-to-end data handling — from ingestion of raw CSV files to generation of key business metrics and insightful visual dashboards.
+This is a personal data project where I analyze vendor sales, purchases, and freight data using Python, SQL, and Power BI.  It covers end-to-end data handling — from ingestion of raw CSV files to generation of key business metrics and insightful visual dashboards.
+The final output is a clean summary table and a Power BI dashboard that shows profit margins, stock turnover, and top-performing brands.
+I built this to strengthen my data analytics skills and learn how to move from raw files to business insights.
+
+## 🧠 Why I Built This
+I wanted to understand how vendors contribute to overall business performance. This project gave me hands-on practice with SQL joins, data cleaning, and visualizing business KPIs in Power BI.
 
 ---
 
-## 🚀 Features
+##  Features
 
 - **Automated data ingestion** from CSV files into SQLite
 - **SQL-powered aggregation** of purchases, sales, and freight data
@@ -20,27 +25,23 @@ This project performs a detailed **sales and purchase analysis** for vendors usi
 
 ---
 
-## 🧱 Project Structure
+## Project Structure
 
-```bash
-Vendor-Sales-Analysis/
-│
-├── data/                         # Folder to store raw CSV files (purchases, sales, etc.)
-├── logs/                         # Auto-generated logs for ingestion and summary steps
-│
-├── ingestion_db.py              # Script to ingest CSV files into SQLite DB
-├── sales_summary.py             # Script to compute vendor KPIs and generate final_table
-├── inventory.db                 # SQLite database (auto-generated)
-│
-├── EDA for sales analysis.ipynb # Jupyter notebook for exploratory data analysis
-├── SQL for sales analysis.ipynb # Notebook with SQL queries for sales insights
-├── Vendor Sales Project Dashboard.pbix  # Power BI dashboard built from final_table
-└── README.md                    # Project documentation
-````
+| File/Folder                         | Description                                                |
+|------------------------------------|------------------------------------------------------------|
+| `data/`                             | Folder with all input CSVs (sales, purchases, etc.)        |
+| `logs/`                             | Log files from data ingestion and summary steps            |
+| `ingestion_db.py`                   | Script to load CSVs into a SQLite database                 |
+| `sales_summary.py`                  | SQL joins + KPI calculations + data cleaning               |
+| `EDA for sales analysis.ipynb`      | Jupyter notebook for visual and statistical analysis       |
+| `SQL for sales analysis.ipynb`      | SQL queries to explore vendor sales                        |
+| `Vendor Sales Project Dashboard.pbix` | Power BI dashboard built using cleaned data              |
+| `inventory.db`                      | SQLite database created automatically                      |
+
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Python 3.x**
   - `pandas`, `sqlite3`, `sqlalchemy`, `logging`
@@ -50,7 +51,7 @@ Vendor-Sales-Analysis/
 
 ---
 
-## 🔄 Workflow
+##  Workflow
 
 ### Step 1: Ingest Data
 
@@ -82,24 +83,50 @@ python sales_summary.py
 
 ### Step 3: Explore & Visualize
 
-#### 🔍 Jupyter EDA
+####  Jupyter EDA
 
 * Open `EDA for sales analysis.ipynb` to analyze trends, top vendors, sales patterns, etc.
 
-#### 📊 Power BI Dashboard
-
-* File: `Vendor Sales Project Dashboard.pbix`
-* Built using the output from `final_table`
-* Includes charts like:
-
-  * Top Performing Vendors
-  * Brand-wise Profit Margins
-  * Sales vs Purchase Comparison
-  * Freight Cost Analysis
+Here’s a polished and natural-sounding **"Dashboard Insights"** section that you can directly paste into your `README.md`:
 
 ---
 
-## 📈 Metrics Calculated
+#### Power BI Dashboard Insights
+
+The Power BI dashboard (📁 `Vendor Sales Project Dashboard.pbix`) summarizes the performance of vendors and brands using visual KPIs and charts. It was built on top of the cleaned `final_table` generated through SQL and Python scripts.
+
+Here are some of the key insights:
+
+*  **Total Sales**: \$441.41 million
+*  **Total Purchase**: \$307.34 million
+*  **Gross Profit**: \$134.07 million
+*  **Profit Margin**: 38.7%
+*  **Unsold Capital**: \$2.71 million tied up in unsold inventory
+*  **Total Vendors**: 119
+
+
+ **Top Performers**
+
+* **Top Vendor by Sales**: Diageo North America Inc. (\$68M)
+* **Top Brand**: Jack Daniel's (\$8M)
+* Other strong vendors include Martignetti, Pernod Ricard, Jim Beam Brands, and Bacardi USA.
+
+ **Low Performers**
+
+* Vendors like Alisa Carr Beverages and Highland Wine Merchants showed the lowest contributions or margins.
+* Scatter plot analysis highlights brands with **low profit margins** despite high total sales — potential candidates for review or pricing optimization.
+
+**Strategic Highlights**
+
+* A small group of vendors account for a large share of purchases — useful for renegotiating contracts or planning bulk orders.
+* Several brands show strong sales but low profitability — can be addressed by reviewing discounting, freight, or tax factors.
+* The dashboard makes it easier to **spot inefficiencies and improve vendor strategies**.
+
+> ✅ The `.pbix` file can be opened in Power BI Desktop for full interactivity.
+
+---
+
+##  Metrics Calculated
 
 | Metric                | Formula                                      |
 | --------------------- | -------------------------------------------- |
@@ -107,6 +134,11 @@ python sales_summary.py
 | **Profit Margin (%)** | `(GrossProfit / TotalSalesDollars) * 100`    |
 | **Stock Turnover**    | `TotalSalesQuantity / TotalPurchaseQuantity` |
 | **Sales-to-Purchase** | `TotalSalesDollars / TotalPurchaseDollars`   |
+
+---
+
+## 🔄 What Could Be Better
+Right now, the ingestion script replaces tables each time. Eventually, I want to switch to incremental loading and maybe move from SQLite to PostgreSQL.
 
 ---
 
