@@ -87,13 +87,11 @@ python sales_summary.py
 
 * Open `EDA for sales analysis.ipynb` to analyze trends, top vendors, sales patterns, etc.
 
-Here’s a polished and natural-sounding **"Dashboard Insights"** section that you can directly paste into your `README.md`:
-
 ---
 
 #### Power BI Dashboard Insights
 
-The Power BI dashboard (📁 `Vendor Sales Project Dashboard.pbix`) summarizes the performance of vendors and brands using visual KPIs and charts. It was built on top of the cleaned `final_table` generated through SQL and Python scripts.
+The Power BI dashboard (`Vendor Sales Project Dashboard.pbix`) summarizes the performance of vendors and brands using visual KPIs and charts. It was built on top of the cleaned `final_table` generated through SQL and Python scripts.
 
 Here are some of the key insights:
 
@@ -122,7 +120,7 @@ Here are some of the key insights:
 * Several brands show strong sales but low profitability — can be addressed by reviewing discounting, freight, or tax factors.
 * The dashboard makes it easier to **spot inefficiencies and improve vendor strategies**.
 
-> ✅ The `.pbix` file can be opened in Power BI Desktop for full interactivity.
+>  The `.pbix` file can be opened in Power BI Desktop for full interactivity.
 
 ---
 
@@ -137,7 +135,7 @@ Here are some of the key insights:
 
 ---
 
-## 🔄 What Could Be Better
+##  What Could Be Better
 Right now, the ingestion script replaces tables each time. Eventually, I want to switch to incremental loading and maybe move from SQLite to PostgreSQL.
 
 ---
