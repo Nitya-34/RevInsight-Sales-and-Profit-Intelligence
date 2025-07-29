@@ -1,5 +1,5 @@
 
-#  Vendor Sales Analysis
+#  RevInsight: Sales and Profit Intelligence
 
 This is a personal data project where I analyze vendor sales, purchases, and freight data using Python, SQL, and Power BI.  It covers end-to-end data handling — from ingestion of raw CSV files to generation of key business metrics and insightful visual dashboards.
 The final output is a clean summary table and a Power BI dashboard that shows profit margins, stock turnover, and top-performing brands.
